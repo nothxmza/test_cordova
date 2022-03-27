@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+		</style>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+		<div class="app">
+			<h1>Mes titres</h1>
+			<div class="ticketValidate">
+				<img src="img/ligne.png">
+				<h4>1</h4>
+				<p class="travels">voyageurs</p>
+				<div class="correspondance">
+					<div class="rulesBis 1">Correspondance autorisée</div>
+					<div class="limitedHour">
+						Jusqu'à
+						<script>
+							let date1 = new Date();
+							if (date1.getMinutes() >= 46)
+							{
+								var hours = date1.getHours() + 2;
+								var diff = 60 - date1.getMinutes();
+								var diff1 = 14 - diff;
+								var minutes  = date1.getMinutes() + diff1;
+							}
+							else
+							{
+								var hours = date1.getHours() + 1;
+								var minutes = date1.getMinutes() + 14;
+							}
+							let hourCorrespondance = hours + 'h' + minutes;
+							if (!localStorage.hourCorrespondance)
+								localStorage.hourCorrespondance = hourCorrespondance;
+							document.write(hourCorrespondance);
+						</script>
+					</div>
+					<br>
+					<div class="rulesBis dateValidate">Validé(s) le</div>
+					<div class="rulesBis 3">
+						<script>
+						 var maintenant=new Date();
+						 var hours = maintenant.getHours();
+                        var minutes = maintenant.getMinutes();
+                        var secondes = maintenant.getSeconds();
+                        if(hours < 10)
+                            hours = '0' + hours;
+                        if(minutes < 10)
+                            minutes = '0' + minutes;
+						var totalh = hours + ':'+ minutes + ':' + secondes;
+						///pour avoir la bonne h pour controle (totalh2)
+						var totalh2 = hours + 'h'+ minutes + 'min' + secondes + 's'; 
+						var jour = maintenant.getDate();
+						var month = maintenant.getMonth();
+						var Year = maintenant.getFullYear();
+						if(month < 10)
+							month =  '0' + month;
+						var totald = jour + '/' + month + '/' + Year;
+						//pour controle
+						var totaldh =  totald + ' ' + 'à' + ' ' + totalh2;
+						//pour valider
+						var totaldh2 =  totald + ' ' + 'à' + ' ' + totalh;
+						if (!localStorage.totaldh2)
+								localStorage.totaldh2 = totaldh2;
+						if (!localStorage.totaldh)
+								localStorage.totaldh = totaldh;
+						document.write(totaldh2);
+				
+						</script>
+					</div>
+				</div>
+				<div class="time">
+					<div class="cercleValidate">
+						<div class="rulesRules">
+							<div class="limitedHour">53</div>
+							<div class="rulesBis">MIN</div>
+						</div>
+					</div>
+				</div>
+				<button><a href="control.html">Contrôle</a></button>
+			</div>
+			<h1>Détails</h1>
+			<div class="tickets">
+				<img src="img/ligne.png">
+				<h4>6</h4>
+				<p class="travels">voyage(s)</p>
+				<p class="rules">Voyager sur les lignes à tarification urbaine, hors services spéciaux.</p>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="buy">
+				<a href="buy.html"><img src="img/charriot.jpg"></a>
+			</div>
+			<div class="title">
+				<a href="index.html"><img src="img/titres.jpg"></a>
+			</div>
+			<div class="more">
+				<a href="image.html"><img src="img/+dechois.jpg"></a>
+			</div>
+		</div>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

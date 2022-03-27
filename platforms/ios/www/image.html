@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+		</style>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+		<div class="app">    
+            <script>
+                if(localStorage.image)
+                    localStorage.clear();
+                function afficher1() {
+                    var image = "img/bird.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher2() {
+                    var image = "img/elephant-jaune.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher3() {
+                    var image = "img/ours-jaune.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher4() {
+                    var image = "img/giraf-jaune.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher5() {
+                    var image = "img/tortue-jaune.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher6() {
+                    var image = "img/ours-vert.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher7() {
+                    var image = "img/tortue-vert.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher8() {
+                    var image = "img/elephant-vert.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher9() {
+                    var image = "img/giraf-vert.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher10() {
+                    var image = "img/ours-bleu.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher11() {
+                    var image = "img/tortue-bleu.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+                function afficher12() {
+                    var image = "img/oiseau-bleu.jpg";
+                    if (!localStorage.image)
+								localStorage.image = image;}
+            </script>
+           <table align="center" cellpadding="0">
+               <h3>JAUNE</h3>
+            <div>Cliquer <a href="javascript:afficher1()">ICI</a> pour afficher l'image oiseau jaune.</div>
+            <br>
+            <div>Cliquer <a href="javascript:afficher2()">ICI</a> pour afficher l'image elephant jaune.</div>
+            <br>
+            <div>Cliquer <a href="javascript:afficher3()">ICI</a> pour afficher l'image ours-jaune.</div>
+            <br>
+            <div>Cliquer <a href="javascript:afficher4()">ICI</a> pour afficher l'image giraf-jaune.</div>
+            <br>
+            <div>Cliquer <a href="javascript:afficher5()">ICI</a> pour afficher l'image tortue-jaune.</div>
+             <h3>VERT</h3>
+            <div>Cliquer <a href="javascript:afficher6()">ICI</a> pour afficher l'image ours vert.</div>
+            <br>
+            <div>Cliquer <a href="javascript:afficher7()">ICI</a> pour afficher l'image tortue-vert.</div>
+            <br>
+            <div>Cliquer <a href="javascript:afficher8()">ICI</a> pour afficher l'image elephant-vert.</div>
+            <br>
+            <div>Cliquer <a href="javascript:afficher9()">ICI</a> pour afficher l'image giraf-vert.</div>
+                <h3>BLEU</h3>
+            <div>Cliquer <a href="javascript:afficher10()">ICI</a> pour afficher l'image ours-bleu.</div>
+            <br>
+            <div>Cliquer <a href="javascript:afficher11()">ICI</a> pour afficher l'image tortue-bleu.</div>
+            <br>
+            <div>Cliquer <a href="javascript:afficher12()">ICI</a> pour afficher l'image oiseau-bleu.</div>
+            </table>
+		</div>
+		<div class="footer">
+			<div class="buy">
+				<a href="buy.html"><img src="img/charriot.jpg"></a>
+			</div>
+			<div class="title">
+				<a href="index.html"><img src="img/titres.jpg"></a>
+			</div>
+			<div class="more">
+				<a href="image.html"><img src="img/+dechois.jpg"></a>
+			</div>
+		</div>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

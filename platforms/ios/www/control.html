@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap');
+            </style>
+            
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+		</style>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        
+        <title>Hello World</title>
+    </head>
+    <body>
+		<div class="app">
+			<div class="top">
+                <span class="chevrong"> <</span>
+                <span class="mtitre"> <a href="validate.html">Mes titres</a> </span>
+                <span class="ccontrole">En cas de contrôle</span>
+            </div>
+            <div class="animal"> 
+                <script type="text/javascript">
+                    document.write('<img src="'+ localStorage.image +'" />');
+                </script>
+
+            </div>
+			<div class="control">
+				<img src="img/ligne.png">
+				<h4>6</h4>
+				<p class="travels">voyage(s)</p>
+                <p class="corresp">Correspondance autorisée</p>
+                <p class="time">
+                    <script>
+                         document.write("Jusqu à " + localStorage.hourCorrespondance);
+                    </script>
+                </p>
+                <div id="cercletime"></div>
+                <p class="time2">72</p>
+                <p class="min">MIN</p>
+                <p class="date">Date</p>
+                <div class="date1">
+                    <script>
+                        var maintenant=new Date();
+                        var jour = maintenant.getDate();
+                        var month = maintenant.getMonth();
+                        var Year = maintenant.getFullYear();
+                        document.write(jour);
+                        document.write('/');
+                        if(month < 10)
+                             document.write( '0' + month + '/');
+                        else
+                            document.write(month + '/');
+                        document.write(Year);
+                        </script>
+                    </div>
+                <p class="timedays">Heure</p>
+                <div class="timedays1">
+                    <script>
+                        var date1 = new Date();
+                        var hours = date1.getHours();
+                        var minutes = date1.getMinutes();
+                        var secondes = date1.getSeconds();
+                        if(hours < 10)
+                            hours = '0' + hours;
+                        if(minutes < 10)
+                            minutes = '0' + minutes;
+                        document.write( hours + 'h' + minutes + 'min' + secondes + 's');
+                    </script>
+                </div>
+                <p class="validate">Validé(s) le</p>
+                <span class="timedate">
+                    <script>
+                    document.write(localStorage.totaldh);
+                    </script>
+                </span>
+                <button><a href="validate.html">Terminer</a></button>
+			</div>
+		</div>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
